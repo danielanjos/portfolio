@@ -85,10 +85,6 @@
     font-size: .8rem;
     line-height: 32px;
   }
-
-  .icon{
-    font-size: 16px !important;
-  }
 }
 
 @media(min-width: 1301px){

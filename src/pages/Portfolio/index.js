@@ -1,5 +1,15 @@
 import React, { Component } from 'react';
-import { FaFacebook, FaGithub, FaLinkedin } from 'react-icons/fa';
+import {
+  FaFacebook,
+  FaGithub,
+  FaLinkedin,
+  FaPhp,
+  FaBootstrap,
+  FaCss3,
+  FaGitAlt,
+  FaHtml5
+} from 'react-icons/fa';
+import { DiDotnet, DiJavascript1, DiJqueryLogo, DiMysql, DiDatabase, DiVisualstudio } from 'react-icons/di'
 
 import { Fade, Zoom } from 'react-reveal';
 
@@ -72,12 +82,54 @@ export default class Portfolio extends Component {
               </Zoom>
             </div>
 
+
+            <div className="icones">
+              <Fade left cascade when={this.state.showMenuLateral}>
+                <ul>
+                  <li>
+                    <FaHtml5 size={32} className="icon" color="#FFF" title="Html5" />
+                  </li>
+                  <li>
+                    <FaCss3 size={32} className="icon" color="#FFF" title="Css3" />
+                  </li>
+                  <li>
+                    <FaPhp size={32} className="icon" color="#FFF" title="PHP" />
+                  </li>
+                  <li>
+                    <FaBootstrap size={32} className="icon" color="#FFF" title="Bootstrap" />
+                  </li>
+                  <li>
+                    <FaGitAlt size={32} className="icon" color="#FFF" title="Git" />
+                  </li>
+                  <li>
+                    <DiDotnet size={32} className="icon" color="#FFF" title=".NET" />
+                  </li>
+                  <li>
+                    <DiJavascript1 size={32} className="icon" color="#FFF" title="JavaScript" />
+                  </li>
+                  <li>
+                    <DiJqueryLogo size={32} className="icon" color="#FFF" title="JQuery" />
+                  </li>
+                  <li>
+                    <DiMysql size={32} className="icon" color="#FFF" title="MySQL" />
+                  </li>
+                  <li>
+                    <DiDatabase size={32} className="icon" color="#FFF" title="SQL" />
+                  </li>
+                  <li>
+                    <DiVisualstudio size={32} className="icon" color="#FFF" title="Visual Studio" />
+                  </li>
+                </ul>
+              </Fade>
+            </div>
+
+
             <nav>
               <Fade left cascade when={this.state.showMenuLateral}>
                 <ul>
-                  <li><a href="https://www.linkedin.com/in/dmartins-anj/">LinkedIn <FaLinkedin size={24} className="icon" color="#FFF" /></a></li>
-                  <li><a href="https://github.com/danielanjos/">Github <FaGithub size={24} className="icon" color="#FFF" /></a></li>
-                  <li><a href="https://www.facebook.com/dmartins.anj">Facebook <FaFacebook size={24} className="icon" color="#FFF" /></a></li>
+                  <li><a href="https://www.linkedin.com/in/dmartins-anj/"> <span>LinkedIn</span> <FaLinkedin size={24} className="icon" color="#FFF" /></a></li>
+                  <li><a href="https://github.com/danielanjos/"><span>Github</span> <FaGithub size={24} className="icon" color="#FFF" /></a></li>
+                  <li><a href="https://www.facebook.com/dmartins.anj"><span>Facebook</span> <FaFacebook size={24} className="icon" color="#FFF" /></a></li>
                 </ul>
               </Fade>
             </nav>
