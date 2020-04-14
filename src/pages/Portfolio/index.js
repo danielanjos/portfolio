@@ -56,9 +56,6 @@ export default class Portfolio extends Component {
     return (
 
       <div className="container">
-        <div className="projetos">
-              <Projetos />
-            </div>
         <div className="menu">
           <section className="menu-lateral">
             <Fade left cascade when={this.state.showMenuLateral}>
@@ -78,9 +75,9 @@ export default class Portfolio extends Component {
             <nav>
               <Fade left cascade when={this.state.showMenuLateral}>
                 <ul>
-                  <li><a href="/">LinkedIn <FaLinkedin size={24} className="icon" color="#FFF" /></a></li>
-                  <li><a href="/">Github <FaGithub size={24} className="icon" color="#FFF" /></a></li>
-                  <li><a href="/">Facebook <FaFacebook size={24} className="icon" color="#FFF" /></a></li>
+                  <li><a href="https://www.linkedin.com/in/dmartins-anj/">LinkedIn <FaLinkedin size={24} className="icon" color="#FFF" /></a></li>
+                  <li><a href="https://github.com/danielanjos/">Github <FaGithub size={24} className="icon" color="#FFF" /></a></li>
+                  <li><a href="https://www.facebook.com/dmartins.anj">Facebook <FaFacebook size={24} className="icon" color="#FFF" /></a></li>
                 </ul>
               </Fade>
             </nav>
