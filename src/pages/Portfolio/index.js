@@ -231,7 +231,7 @@ export default class Portfolio extends Component {
                 </div>
               </Fade>
               <Zoom delay={250} duration={500} when={this.state.showTxtOla}>
-                <span className="fonte-roxa" >Daniel</span>
+                <span className="fonte-roxa" >DanieEEEEEEEEEEEEEEl</span>
               </Zoom>
 
               <Fade right cascade when={this.state.showTxtOla}>
