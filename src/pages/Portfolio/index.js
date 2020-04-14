@@ -131,6 +131,7 @@ export default class Portfolio extends Component {
   };
 
   handleOpenModal = (listaImagens) => {
+    console.log('ClickProjeto');
     this.setState({
       openModal: true,
       listaImagens: listaImagens
