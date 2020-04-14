@@ -94,6 +94,7 @@ export default class Projetos extends Component {
     super(props);
     this.state = {
       openModal: false,
+      listaImages: []
     }
   }
 
@@ -102,7 +103,7 @@ export default class Projetos extends Component {
       // <div className="fundo-galeria">
         <div className="conteudo-galeria">
           <ImageGallery
-            items={this.state.listaImagens}
+            items={lowcostImages}
             showFullscreenButton={false}
             showPlayButton={false}
             showBullets={true}
@@ -112,16 +113,19 @@ export default class Projetos extends Component {
     )
   };
 
-  handleOpenModal = (listaImagens) => {
+  handleOpenModal = () => {
+    console.log("ABRINDO MODAL");
     this.setState({
       openModal: true,
-      listaImagens: listaImagens
+      listaImages: []
     });
+    console.log("SETOU STATUS");
   };
 
   handleCloseModal = () => {
     this.setState({
-      openModal: false
+      openModal: false,
+      listaImages: []
     });
   };
 
@@ -137,8 +141,8 @@ export default class Projetos extends Component {
       <section className="conteudo dvProjetos">
         <h2>Projetos</h2>
         <ul>
-          <li><img src={ProjetoLcCapaImg} onClick={() => this.handleOpenModal(lowcostImages)} alt="Sistema de faturamento da Lowcost" /></li>
-          <li className="logo-safishare"><img src={ProjetoSafishareCapaImg} onClick={() => this.handleOpenModal(safishareImages)} alt="Sistema de faturamento da Lowcost" /></li>
+          <li><img src={ProjetoLcCapaImg} onClick={() => this.handleOpenModal()} alt="Sistema de faturamento da Lowcost" /></li>
+          <li className="logo-safishare"><img src={ProjetoSafishareCapaImg} onClick={() => this.handleOpenModal()} alt="Sistema de faturamento da Lowcost" /></li>
         </ul>
       </section>
       </>
