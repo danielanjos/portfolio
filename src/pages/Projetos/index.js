@@ -94,7 +94,6 @@ export default class Projetos extends Component {
     super(props);
     this.state = {
       openModal: false,
-      listaImages: []
     }
   }
 
@@ -102,32 +101,27 @@ export default class Projetos extends Component {
     return (
       // <div className="fundo-galeria">
         <div className="conteudo-galeria">
-          <h1>SALVE</h1>
-          {/* <ImageGallery
-            items={lowcostImages}
+          <ImageGallery
+            items={this.state.listaImagens}
             showFullscreenButton={false}
             showPlayButton={false}
             showBullets={true}
-          /> */}
+          />
         </div>
       // </div>
     )
   };
 
-  handleOpenModal = () => {
-    console.log("ABRINDO MODAL 04");
+  handleOpenModal = (listaImagens) => {
     this.setState({
       openModal: true,
-      listaImages: []
+      listaImagens: listaImagens
     });
-    console.log(this.state.openModal);
-    console.log("SETOU STATUS");
   };
 
   handleCloseModal = () => {
     this.setState({
-      openModal: false,
-      listaImages: []
+      openModal: false
     });
   };
 
@@ -136,15 +130,15 @@ export default class Projetos extends Component {
       <>
       <Modal
       open={this.state.openModal}
-      // onClose={this.handleCloseModal}
+      onClose={this.handleCloseModal}
       >
         {this.modal()}
       </Modal>
       <section className="conteudo dvProjetos">
         <h2>Projetos</h2>
         <ul>
-          <li><img src={ProjetoLcCapaImg} onClick={() => this.handleOpenModal()} alt="Sistema de faturamento da Lowcost" /></li>
-          <li className="logo-safishare"><img src={ProjetoSafishareCapaImg} onClick={() => this.handleOpenModal()} alt="Sistema de faturamento da Lowcost" /></li>
+          <li><img src={ProjetoLcCapaImg} onClick={() => this.handleOpenModal(lowcostImages)} alt="Sistema de faturamento da Lowcost" /></li>
+          <li className="logo-safishare"><img src={ProjetoSafishareCapaImg} onClick={() => this.handleOpenModal(safishareImages)} alt="Sistema de faturamento da Lowcost" /></li>
         </ul>
       </section>
       </>

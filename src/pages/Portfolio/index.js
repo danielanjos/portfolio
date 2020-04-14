@@ -38,24 +38,27 @@ export default class Portfolio extends Component {
   }
 
   handleScroll(e) {
-    let paginaInicial = document.querySelector('.pagina-inicial');
-    let paginaInicialRect = paginaInicial.getBoundingClientRect();
-    let sobreMim = document.querySelector('.sobre-mim');
-    let sobreMimRect = sobreMim.getBoundingClientRect();
+    // let paginaInicial = document.querySelector('.pagina-inicial');
+    // let paginaInicialRect = paginaInicial.getBoundingClientRect();
+    // let sobreMim = document.querySelector('.sobre-mim');
+    // let sobreMimRect = sobreMim.getBoundingClientRect();
 
-    if (paginaInicialRect.top > -200) {
-      this.setState({ showTxtOla: true, showMenuLateral: false, showTxtSobre: false, showDvProjetos: false });
-    } else if (paginaInicialRect.top < -201 && sobreMimRect.top > -50) {
-      this.setState({ showTxtOla: false, showMenuLateral: true, showTxtSobre: true, showDvProjetos: false });
-    } else if (sobreMimRect.top < -51) {
-      this.setState({ showTxtSobre: false, showDvProjetos: true });
-    }
+    // if (paginaInicialRect.top > -200) {
+    //   this.setState({ showTxtOla: true, showMenuLateral: false, showTxtSobre: false, showDvProjetos: false });
+    // } else if (paginaInicialRect.top < -201 && sobreMimRect.top > -50) {
+    //   this.setState({ showTxtOla: false, showMenuLateral: true, showTxtSobre: true, showDvProjetos: false });
+    // } else if (sobreMimRect.top < -51) {
+    //   this.setState({ showTxtSobre: false, showDvProjetos: true });
+    // }
   }
 
   render() {
     return (
 
       <div className="container">
+        <div className="projetos">
+            <Projetos />
+          </div>
         <div className="menu">
           <section className="menu-lateral">
             <Fade left cascade when={this.state.showMenuLateral}>
@@ -122,9 +125,9 @@ export default class Portfolio extends Component {
           </div>
 
           <Fade right when={this.state.showDvProjetos}>
-            <div className="projetos">
+            {/* <div className="projetos">
               <Projetos />
-            </div>
+            </div> */}
           </Fade>
         </div>
       </div >
