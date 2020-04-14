@@ -102,23 +102,25 @@ export default class Projetos extends Component {
     return (
       // <div className="fundo-galeria">
         <div className="conteudo-galeria">
-          <ImageGallery
+          <h1>SALVE</h1>
+          {/* <ImageGallery
             items={lowcostImages}
             showFullscreenButton={false}
             showPlayButton={false}
             showBullets={true}
-          />
+          /> */}
         </div>
       // </div>
     )
   };
 
   handleOpenModal = () => {
-    console.log("ABRINDO MODAL");
+    console.log("ABRINDO MODAL 04");
     this.setState({
       openModal: true,
       listaImages: []
     });
+    console.log(this.state.openModal);
     console.log("SETOU STATUS");
   };
 
