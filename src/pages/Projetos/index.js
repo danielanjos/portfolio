@@ -134,7 +134,7 @@ export default class Projetos extends Component {
       <>
       <Modal
       open={this.state.openModal}
-      onClose={this.handleCloseModal}
+      // onClose={this.handleCloseModal}
       >
         {this.modal()}
       </Modal>
