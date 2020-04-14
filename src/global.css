@@ -1,0 +1,35 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway:400,500,700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    box-sizing: border-box;
+}
+
+body{
+position: absolute;
+width: 1440px;
+left: 0px;
+top: 0px;
+}
+
+body {
+  background: #1F1F1F;
+  color: #FFF;
+  font: 400 14px Raleway, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+.fonte-roxa{
+  color: #9045F0;
+}
+
+.linha-horizontal{
+  color: #fff;
+  top: 99vh;
+  width: 100vw;
+  border: 1px solid #fff;
+  position: absolute;
+}

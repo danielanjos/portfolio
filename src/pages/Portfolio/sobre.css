@@ -1,0 +1,34 @@
+.sobre-mim{
+  position: relative;
+  width:100%;
+  height:50vh;
+}
+
+.txt-sobre{
+  /* margin-top: 60vh; */
+  top: 0;
+  font-size: 2em;
+  width: 100%;
+}
+
+
+@media(min-width: 1300px){
+  .txt-sobre{
+    width: 80%;
+    font-size: 2em;
+  }
+}
+
+@media(min-width: 900px) and (max-width: 1300px){
+  .txt-sobre{
+    width: 50%;
+    font-size: 3em;
+  }
+}
+
+@media(max-width: 899px){
+  .txt-sobre{
+    width: 30%;
+    font-size: 2.5em;
+  }
+}
