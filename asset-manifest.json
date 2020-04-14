@@ -1,0 +1,40 @@
+{
+  "files": {
+    "main.css": "/portfolio/static/css/main.446da1a4.chunk.css",
+    "main.js": "/portfolio/static/js/main.dce8ee86.chunk.js",
+    "main.js.map": "/portfolio/static/js/main.dce8ee86.chunk.js.map",
+    "runtime-main.js": "/portfolio/static/js/runtime-main.075c0788.js",
+    "runtime-main.js.map": "/portfolio/static/js/runtime-main.075c0788.js.map",
+    "static/css/2.40a775a0.chunk.css": "/portfolio/static/css/2.40a775a0.chunk.css",
+    "static/js/2.ec58f2cc.chunk.js": "/portfolio/static/js/2.ec58f2cc.chunk.js",
+    "static/js/2.ec58f2cc.chunk.js.map": "/portfolio/static/js/2.ec58f2cc.chunk.js.map",
+    "index.html": "/portfolio/index.html",
+    "precache-manifest.73c0a9668d264c32c5e31e4a2440c774.js": "/portfolio/precache-manifest.73c0a9668d264c32c5e31e4a2440c774.js",
+    "service-worker.js": "/portfolio/service-worker.js",
+    "static/css/2.40a775a0.chunk.css.map": "/portfolio/static/css/2.40a775a0.chunk.css.map",
+    "static/css/main.446da1a4.chunk.css.map": "/portfolio/static/css/main.446da1a4.chunk.css.map",
+    "static/js/2.ec58f2cc.chunk.js.LICENSE.txt": "/portfolio/static/js/2.ec58f2cc.chunk.js.LICENSE.txt",
+    "static/media/cadastraEquipamento.png": "/portfolio/static/media/cadastraEquipamento.65d0275d.png",
+    "static/media/cadastrapermissao.png": "/portfolio/static/media/cadastrapermissao.a21037a6.png",
+    "static/media/checklist.png": "/portfolio/static/media/checklist.71337d68.png",
+    "static/media/conferencia.png": "/portfolio/static/media/conferencia.6bcab623.png",
+    "static/media/conferenciaExcel.png": "/portfolio/static/media/conferenciaExcel.a3e61bb3.png",
+    "static/media/envioarquivos.png": "/portfolio/static/media/envioarquivos.c75b1bb4.png",
+    "static/media/listaEquipamentos.png": "/portfolio/static/media/listaEquipamentos.30c02909.png",
+    "static/media/listaNumeradores.png": "/portfolio/static/media/listaNumeradores.bde44114.png",
+    "static/media/listaPedidos.png": "/portfolio/static/media/listaPedidos.e2458d29.png",
+    "static/media/logo_safishare.png": "/portfolio/static/media/logo_safishare.dd8c7e26.png",
+    "static/media/lowcost-logo.png": "/portfolio/static/media/lowcost-logo.d42946e2.png",
+    "static/media/menu.png": "/portfolio/static/media/menu.e45488a1.png",
+    "static/media/perguntas1.png": "/portfolio/static/media/perguntas1.b691a1cc.png",
+    "static/media/perguntas2.png": "/portfolio/static/media/perguntas2.ada7138f.png",
+    "static/media/usuarios.png": "/portfolio/static/media/usuarios.99c496bb.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.075c0788.js",
+    "static/css/2.40a775a0.chunk.css",
+    "static/js/2.ec58f2cc.chunk.js",
+    "static/css/main.446da1a4.chunk.css",
+    "static/js/main.dce8ee86.chunk.js"
+  ]
+}
