@@ -226,7 +226,7 @@ export default class Portfolio extends Component {
             <section className="conteudo txt-ola">
               <Fade right cascade when={this.state.showTxtOla}>
                 <div>
-                  <p>Olá!</p>
+                  <p>Olaaaaaaaaaaaaaaaaá!</p>
                   <p>Meu nome é </p>
                 </div>
               </Fade>
