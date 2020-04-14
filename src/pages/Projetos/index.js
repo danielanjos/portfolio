@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React from 'react';
 import ImageGallery from 'react-image-gallery';
 import Modal from '@material-ui/core/Modal';
 
@@ -26,122 +26,109 @@ import SafisharePerguntas1Img from '../../assets/safishare/perguntas1.png';
 import SafisharePerguntas2Img from '../../assets/safishare/perguntas2.png';
 
 const lowcostImages =
-  [
-    {
-      original: LowcostMenu,
-      thumbnail: LowcostMenu,
-    },
-    {
-      original: LowcostCadastraEquipamento,
-      thumbnail: LowcostCadastraEquipamento,
-    },
-    {
-      original: LowcostListaEquipamentos,
-      thumbnail: LowcostListaEquipamentos,
-    },
-    {
-      original: LowcostListaPedidos,
-      thumbnail: LowcostListaPedidos,
-    },
-    {
-      original: LowcostListaNumeradores,
-      thumbnail: LowcostListaNumeradores,
-    },
-    {
-      original: LowcostUsuarios,
-      thumbnail: LowcostUsuarios,
-    },
-    {
-      original: LowcostConferencia,
-      thumbnail: LowcostConferencia,
-    },
-    {
-      original: LowcostConferenciaExcel,
-      thumbnail: LowcostConferenciaExcel,
-    },
-  ];
+[
+  {
+    original: LowcostMenu,
+    thumbnail: LowcostMenu,
+  },
+  {
+    original: LowcostCadastraEquipamento,
+    thumbnail: LowcostCadastraEquipamento,
+  },
+  {
+    original: LowcostListaEquipamentos,
+    thumbnail: LowcostListaEquipamentos,
+  },
+  {
+    original: LowcostListaPedidos,
+    thumbnail: LowcostListaPedidos,
+  },
+  {
+    original: LowcostListaNumeradores,
+    thumbnail: LowcostListaNumeradores,
+  },
+  {
+    original: LowcostUsuarios,
+    thumbnail: LowcostUsuarios,
+  },
+  {
+    original: LowcostConferencia,
+    thumbnail: LowcostConferencia,
+  },
+  {
+    original: LowcostConferenciaExcel,
+    thumbnail: LowcostConferenciaExcel,
+  },
+];
 
 const safishareImages =
-  [
-    {
-      original: SafishareCadastraPermissaoImg,
-      thumbnail: SafishareCadastraPermissaoImg,
-    },
-    {
-      original: SafishareChecklistImg,
-      thumbnail: SafishareChecklistImg,
-    },
-    {
-      original: SafishareEnvioArquivosImg,
-      thumbnail: SafishareEnvioArquivosImg,
-    },
-    {
-      original: SafishareMenuImg,
-      thumbnail: SafishareMenuImg,
-    },
-    {
-      original: SafisharePerguntas1Img,
-      thumbnail: SafisharePerguntas1Img,
-    },
-    {
-      original: SafisharePerguntas2Img,
-      thumbnail: SafisharePerguntas2Img,
-    },
-  ];
+[
+  {
+    original: SafishareCadastraPermissaoImg,
+    thumbnail: SafishareCadastraPermissaoImg,
+  },
+  {
+    original: SafishareChecklistImg,
+    thumbnail: SafishareChecklistImg,
+  },
+  {
+    original: SafishareEnvioArquivosImg,
+    thumbnail: SafishareEnvioArquivosImg,
+  },
+  {
+    original: SafishareMenuImg,
+    thumbnail: SafishareMenuImg,
+  },
+  {
+    original: SafisharePerguntas1Img,
+    thumbnail: SafisharePerguntas1Img,
+  },
+  {
+    original: SafisharePerguntas2Img,
+    thumbnail: SafisharePerguntas2Img,
+  },
+];
 
-export default class Projetos extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      openModal: false,
-    }
-  }
+export default function Projetos() {
+  const [openModal, setOpenModal] = React.useState(false);
+  const [listaImagens, setListaImagens] = React.useState([]);
 
-  modal() {
-    return (
-      // <div className="fundo-galeria">
-        <div className="conteudo-galeria">
-          <ImageGallery
-            items={this.state.listaImagens}
-            showFullscreenButton={false}
-            showPlayButton={false}
-            showBullets={true}
-          />
-        </div>
-      // </div>
-    )
+  const modal = (    
+      <div className="conteudo-galeria">
+        <ImageGallery
+          items={listaImagens}
+          showFullscreenButton={false}
+          showPlayButton={false}
+          showBullets={true}
+        />
+      </div>
+    );
+
+  const handleOpenModal = (listaImagens) => {
+    setOpenModal(true);
+    setListaImagens(listaImagens);
   };
 
-  handleOpenModal = (listaImagens) => {
-    this.setState({
-      openModal: true,
-      listaImagens: listaImagens
-    });
+  const handleCloseModal = () => {
+    setOpenModal(false);
+    setListaImagens([]);
   };
 
-  handleCloseModal = () => {
-    this.setState({
-      openModal: false
-    });
-  };
-
-  render() {
-    return (
-      <>
+  return (
+    <>
       <Modal
-      open={this.state.openModal}
-      onClose={this.handleCloseModal}
+        open={openModal}
+        onClose={handleCloseModal}
       >
-        {this.modal()}
+        {modal}
       </Modal>
       <section className="conteudo dvProjetos">
         <h2>Projetos</h2>
         <ul>
-          <li><img src={ProjetoLcCapaImg} onClick={() => this.handleOpenModal(lowcostImages)} alt="Sistema de faturamento da Lowcost" /></li>
-          <li className="logo-safishare"><img src={ProjetoSafishareCapaImg} onClick={() => this.handleOpenModal(safishareImages)} alt="Sistema de faturamento da Lowcost" /></li>
+          <li><img src={ProjetoLcCapaImg} onClick={() => handleOpenModal(lowcostImages)} alt="Sistema de faturamento da Lowcost" /></li>
+          <li className="logo-safishare"><img src={ProjetoSafishareCapaImg} onClick={() => handleOpenModal(safishareImages)} alt="Sistema de faturamento da Lowcost" /></li>
         </ul>
       </section>
-      </>
-    );
-  }
+    </>
+  );
 }
