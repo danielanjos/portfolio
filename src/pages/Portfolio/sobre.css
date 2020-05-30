@@ -32,3 +32,10 @@
     font-size: 2.5em;
   }
 }
+
+@media (max-width: 768px){
+  .txt-sobre{
+    width: 100%;
+    font-size: 1.5em;
+  }
+}
