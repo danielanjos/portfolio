@@ -1,0 +1,49 @@
+.projetos{
+  position: relative;
+  width:100%;
+  height:70vh;
+  max-width: 700px;
+}
+
+.dvProjetos{
+  /* margin-top: 60vh; */
+  top: 0;
+  font-size: 2em;
+  width: 100%;
+}
+
+.dvProjetos ul{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 24px;
+  list-style: none;
+  margin-top: 15%;
+  width: 100%;
+}
+
+.dvProjetos ul li img{
+  background-color: #fff;
+  width: 100%;
+  height: 200px;
+  border-radius: 10px;
+  object-fit: contain;
+}
+
+.dvProjetos ul li img{
+  width: 100%;
+  /* height: 300px; */
+  border-radius: 10px;
+}
+
+.dvProjetos ul .logo-safishare img{
+  padding: 50px;
+  padding-top: 0;
+}
+
+.dvProjetos ul li {
+  cursor: pointer;
+}
+
+
+
+

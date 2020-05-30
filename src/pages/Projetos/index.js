@@ -93,17 +93,6 @@ export default function Projetos() {
   const [openModal, setOpenModal] = React.useState(false);
   const [listaImagens, setListaImagens] = React.useState([]);
 
-  const modal = (    
-      <div className="conteudo-galeria">
-        <ImageGallery
-          items={listaImagens}
-          showFullscreenButton={false}
-          showPlayButton={false}
-          showBullets={true}
-        />
-      </div>
-    );
-
   const handleOpenModal = (listaImagens) => {
     setOpenModal(true);
     setListaImagens(listaImagens);
@@ -114,6 +103,21 @@ export default function Projetos() {
     setListaImagens([]);
   };
 
+  const modal = (    
+      <div className="conteudo-galeria">
+        <div class="btnFecharModal" onClick={() => handleCloseModal()}>
+          <span><strong>Fechar</strong></span>
+        </div>
+        
+        <ImageGallery
+          items={listaImagens}
+          showFullscreenButton={false}
+          showPlayButton={false}
+          showBullets={true}
+        />
+      </div>
+    );
+
   return (
     <>
       <Modal
@@ -122,13 +126,12 @@ export default function Projetos() {
       >
         {modal}
       </Modal>
-      <section className="conteudo dvProjetos">
+      
         <h2>Projetos</h2>
         <ul>
           <li><img src={ProjetoLcCapaImg} onClick={() => handleOpenModal(lowcostImages)} alt="Sistema de faturamento da Lowcost" /></li>
           <li className="logo-safishare"><img src={ProjetoSafishareCapaImg} onClick={() => handleOpenModal(safishareImages)} alt="Sistema de faturamento da Lowcost" /></li>
         </ul>
-      </section>
     </>
   );
 }

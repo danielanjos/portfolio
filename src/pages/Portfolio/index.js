@@ -33,27 +33,33 @@ export default class Portfolio extends Component {
       showDvProjetos: false,
       showModal: false,
     };
+
   }
 
   componentDidMount() {
     window.onscroll = () => this.handleScroll();
     // window.ontouchmove = () => this.handleScroll();
-  }
 
-  componentWillMount() {
     setInterval(() => {
       if (this.state.firstLoad)
         this.setState({ firstLoad: false, showTxtOla: true, showMenuLateral: false, showTxtSobre: false, showDvProjetos: false })
+      // this.setState({ showTxtOla: true, showMenuLateral: true, showTxtSobre: false, showDvProjetos: false });
     }, 200);
   }
 
+
+
   handleScroll(e) {
+    console.log("rolando");
     let paginaInicial = document.querySelector('.pagina-inicial');
     let paginaInicialRect = paginaInicial.getBoundingClientRect();
     let sobreMim = document.querySelector('.sobre-mim');
     let sobreMimRect = sobreMim.getBoundingClientRect();
 
-    if (paginaInicialRect.top > -200) {
+    // console.log(paginaInicial);
+    console.log(paginaInicialRect.top);
+
+    if (paginaInicialRect.top > 0) {
       this.setState({ showTxtOla: true, showMenuLateral: false, showTxtSobre: false, showDvProjetos: false });
     } else if (paginaInicialRect.top < -201 && sobreMimRect.top > -50) {
       this.setState({ showTxtOla: false, showMenuLateral: true, showTxtSobre: true, showDvProjetos: false });
@@ -65,9 +71,11 @@ export default class Portfolio extends Component {
   render() {
     return (
 
+
       <div className="container">
-        <div className="menu">
-          <section className="menu-lateral">
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"></meta>
+        <section className="menu">
+          <div className="menu-lateral">
             <Fade left cascade when={this.state.showMenuLateral}>
               <div className="imgPerfil">
                 <img src={perfilImg} alt="Daniel Anjos" />
@@ -133,21 +141,23 @@ export default class Portfolio extends Component {
                 </ul>
               </Fade>
             </nav>
-          </section>
-        </div>
+          </div>
+        </section>
 
-        <div className="paginas">
+        <section className="paginas" onScroll={() => this.handleScroll()}>
           <div className="pagina-inicial">
             <Zoom>
               <div className="barra-lateral"></div>
             </Zoom>
-            <section className="conteudo txt-ola">
+
+            <div className="conteudo txt-ola">
               <Fade right cascade when={this.state.showTxtOla}>
                 <div>
                   <p>Olá!</p>
                   <p>Meu nome é </p>
                 </div>
               </Fade>
+
               <Zoom delay={250} duration={500} when={this.state.showTxtOla}>
                 <span className="fonte-roxa" >Daniel</span>
               </Zoom>
@@ -157,28 +167,31 @@ export default class Portfolio extends Component {
                   <p>e eu sou um <br /></p>
                 </div>
               </Fade>
+
               <Zoom delay={250} duration={500} when={this.state.showTxtOla}>
                 <p>desenvolvedor web.</p>
               </Zoom>
-            </section>
+
+            </div>
           </div>
+
           <div className="sobre-mim">
-            <section className="conteudo txt-sobre">
+            <div className="conteudo txt-sobre">
               <Fade right when={this.state.showTxtSobre}>
                 <h2>Sobre Mim</h2>
                 <div>
                   <p>Desenvolvedor há pouco mais de 3 anos, graduado em Ciências da Computação pela UNINOVE. Experiência com aplicações em PHP e C# com ASP.NET. No tempo livre gosto de aprender novas tecnologias e brincar de Game Design com o Unity. Às vezes eu toco piano.</p>
                 </div>
               </Fade>
-            </section>
+            </div>
           </div>
 
           <Fade right when={this.state.showDvProjetos}>
-            <div className="projetos">
+            <div className="conteudo projetos">
               <Projetos />
             </div>
           </Fade>
-        </div>
+        </section>
       </div >
     )
   }

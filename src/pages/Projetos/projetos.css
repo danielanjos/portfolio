@@ -1,27 +1,21 @@
 .projetos{
-  position: relative;
-  width:100%;
-  height:70vh;
-  max-width: 700px;
+  width: 90%;
+  margin-bottom: 20%;
 }
 
-.dvProjetos{
-  /* margin-top: 60vh; */
-  top: 0;
-  font-size: 2em;
-  width: 100%;
+.projetos h2{
+  font-size: 1em !important;
 }
 
-.dvProjetos ul{
+.projetos ul{
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-gap: 24px;
+  grid-template-columns: repeat(1, 1fr);
+  grid-gap: 18px;
   list-style: none;
-  margin-top: 15%;
   width: 100%;
 }
 
-.dvProjetos ul li img{
+.projetos ul li img{
   background-color: #fff;
   width: 100%;
   height: 200px;
@@ -29,21 +23,32 @@
   object-fit: contain;
 }
 
-.dvProjetos ul li img{
+.projetos ul li img{
   width: 100%;
   /* height: 300px; */
   border-radius: 10px;
 }
 
-.dvProjetos ul .logo-safishare img{
-  padding: 50px;
-  padding-top: 0;
+.conteudo-galeria span{
+  margin-left: auto;
+  right: 0;
 }
 
-.dvProjetos ul li {
+
+.projetos ul li {
   cursor: pointer;
 }
 
+@media only screen and (min-width: 768px) {
+  .projetos ul{
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
 
-
+@media only screen and (min-width: 1225px) {
+  .projetos ul .logo-safishare img{
+    padding: 50px;
+    padding-top: 0;
+  }
+}
 

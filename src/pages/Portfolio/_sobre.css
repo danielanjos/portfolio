@@ -7,12 +7,14 @@
 .txt-sobre{
   /* margin-top: 60vh; */
   top: 0;
-  font-size: 1.2em;
-  width: 80%;
+  font-size: 2em;
+  width: 100%;
 }
 
-@media only screen and (min-width: 768px) {
+
+@media(min-width: 1300px){
   .txt-sobre{
+    width: 80%;
     font-size: 2em;
   }
 }
