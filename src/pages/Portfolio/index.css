@@ -1,3 +1,7 @@
+body{
+  width: 100%;
+}
+
 .container{
   max-width: 1100px;
   margin:auto;
@@ -160,3 +164,10 @@
 
 }
 
+@media(max-width: 361px){
+  body{
+    max-width: 360px;
+  }
+
+  
+}
