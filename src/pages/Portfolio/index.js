@@ -38,26 +38,20 @@ export default class Portfolio extends Component {
 
   componentDidMount() {
     window.onscroll = () => this.handleScroll();
-    // window.ontouchmove = () => this.handleScroll();
 
     setInterval(() => {
       if (this.state.firstLoad)
         this.setState({ firstLoad: false, showTxtOla: true, showMenuLateral: false, showTxtSobre: false, showDvProjetos: false })
-      // this.setState({ showTxtOla: true, showMenuLateral: true, showTxtSobre: false, showDvProjetos: false });
     }, 200);
   }
 
 
 
   handleScroll(e) {
-    console.log("rolando");
     let paginaInicial = document.querySelector('.pagina-inicial');
     let paginaInicialRect = paginaInicial.getBoundingClientRect();
     let sobreMim = document.querySelector('.sobre-mim');
     let sobreMimRect = sobreMim.getBoundingClientRect();
-
-    // console.log(paginaInicial);
-    console.log(paginaInicialRect.top);
 
     if (paginaInicialRect.top > 0) {
       this.setState({ showTxtOla: true, showMenuLateral: false, showTxtSobre: false, showDvProjetos: false });

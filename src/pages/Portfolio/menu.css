@@ -130,3 +130,21 @@
   } 
 }
 
+@media (max-height: 680px){
+  .menu-lateral nav ul li a{
+    color: #FFF;
+    text-decoration: none;
+    margin-left: 5%;
+  }
+  
+  .menu-lateral nav ul li a span {
+    display: none;
+  }
+}
+
+@media(max-height: 580px){
+  .menu-lateral .icones{
+    margin-top: 0;
+  }
+}
+
