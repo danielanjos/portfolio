@@ -59,7 +59,7 @@
 
 @media only screen and (max-width: 320px) {
   .container section.menu{
-    background-color: yellow;
+    /* background-color: yellow; */
   }
 }
 

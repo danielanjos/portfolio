@@ -55,7 +55,7 @@ export default class Portfolio extends Component {
 
     if (paginaInicialRect.top > 0) {
       this.setState({ showTxtOla: true, showMenuLateral: false, showTxtSobre: false, showDvProjetos: false });
-    } else if (paginaInicialRect.top < -201 && sobreMimRect.top > -50) {
+    } else if (paginaInicialRect.top < -101 && sobreMimRect.top > -50) {
       this.setState({ showTxtOla: false, showMenuLateral: true, showTxtSobre: true, showDvProjetos: false });
     } else if (sobreMimRect.top < -51) {
       this.setState({ showTxtSobre: false, showDvProjetos: true });
