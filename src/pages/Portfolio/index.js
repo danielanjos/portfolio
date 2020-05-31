@@ -129,9 +129,9 @@ export default class Portfolio extends Component {
             <nav>
               <Fade left cascade when={this.state.showMenuLateral}>
                 <ul>
-                  <li><a href="https://www.linkedin.com/in/dmartins-anj/"> <span>LinkedIn</span> <FaLinkedin size={24} className="icon" color="#FFF" /></a></li>
-                  <li><a href="https://github.com/danielanjos/"><span>Github</span> <FaGithub size={24} className="icon" color="#FFF" /></a></li>
-                  <li><a href="https://www.facebook.com/dmartins.anj"><span>Facebook</span> <FaFacebook size={24} className="icon" color="#FFF" /></a></li>
+                  <li><a target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/dmartins-anj/"> <span>LinkedIn</span> <FaLinkedin size={24} className="icon" color="#FFF" /></a></li>
+                  <li><a target="_blank" rel="noopener noreferrer" href="https://github.com/danielanjos/"><span>Github</span> <FaGithub size={24} className="icon" color="#FFF" /></a></li>
+                  <li><a target="_blank" rel="noopener noreferrer" href="https://www.facebook.com/dmartins.anj"><span>Facebook</span> <FaFacebook size={24} className="icon" color="#FFF" /></a></li>
                 </ul>
               </Fade>
             </nav>
